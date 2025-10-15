@@ -8,20 +8,22 @@ const Carrito = ({ productosEnCarrito, productosEliminados }) => {
           <table className={Styles.tabla}>
             <tr>
               <div className={Styles.prod} key={indice}>
-              <td>
-                <img src={producto.image} alt={producto.title} height={80} width={80} /> 
-              </td>
-              <td>
-                <h4 key={producto.indice}> {producto.title} </h4>
-                <h5>$ {producto.price}</h5>
-                <button onClick={() => productosEliminados(indice)}>Eliminar</button>
-              </td>
+                <td>
+                  <img src={producto.image} alt={producto.title} height={80} width={80} /> 
+                </td>
+                <td>
+                  <p key={producto.indice}> {producto.title} </p>
+                  <p>$ {producto.price}</p>
+                </td>
+                <td>
+                  <button onClick={() => productosEliminados(indice)} id='Eliminar'>Eliminar</button>
+                </td>
               </div>
             </tr>
             </table>  
         ))}
       </div>
-    );
+    ); 
   };
   
   export default Carrito; 
