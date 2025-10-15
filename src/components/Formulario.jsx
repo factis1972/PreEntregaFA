@@ -6,6 +6,7 @@ const Formulario = () => {
     
     const [nombre, setNombre] = useState('');
     const [apellido, setApellido] = useState('');
+    const [mail, setMail] = useState('');
 
     const manejarEnvio = (evento) =>{
         evento.preventDefault();
