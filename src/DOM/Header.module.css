@@ -1,4 +1,6 @@
 .encabezado {
-    display: block ;
-
+   box-sizing: content-box;
+   display: block ;
+/*   position: absolute;*/
+   top: 0px;
 }
