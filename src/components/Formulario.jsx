@@ -10,11 +10,12 @@ const Formulario = () => {
 
     const manejarEnvio = (evento) =>{
         evento.preventDefault();
-        alert(`Enviaste el formulario: ${nombre}, ${apellido}`);
+        alert(`Gracias por suscribirte ${nombre}, ${apellido}!`);
     }
 
     return (
         <div className={Style.formulario}>
+            <h3>Déjanos tus datos para recibir nuestro Newsletter semanal</h3>
             <form onSubmit={manejarEnvio}>
                 <label className={Style.etiqueta} htmlFor="nombre">Nombre</label>
                 <input className={Style.campos}
@@ -32,9 +33,9 @@ const Formulario = () => {
                 />
                 <label className={Style.etiqueta} htmlFor="email">E-mail</label>
                 <input className={Style.campos}
-                    value={apellido}
+                    value={mail}
                     type="email"
-                    onChange={evento=>setApellido(evento.target.value)}
+                    onChange={evento=>setMail(evento.target.value)}
                     id="email"
                 />
                 <button className={Style.btnEnviar} type="submit">
