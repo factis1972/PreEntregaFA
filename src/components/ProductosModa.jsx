@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import Styles from './Productos.module.css'
 
 const ProductosModa = () => {
@@ -23,7 +22,7 @@ const ProductosModa = () => {
       });
   },[]);
 
-  if (cargando) return 'Cargando productos...';
+  if (cargando) return <h4>Cargando productos MODA...</h4>;
   if (error) return error;
 
   const prodCat = productos.filter((producto, indice) => producto.category.includes('clothing'))

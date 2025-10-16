@@ -23,7 +23,7 @@ const Productos = ({ agregarProducto }) => {
       });
   },[]);
 
-  if (cargando) return 'Cargando productos...';
+  if (cargando) return <h4>Cargando productos...</h4>;
   if (error) return error;
 
   return(
